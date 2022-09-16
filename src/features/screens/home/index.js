@@ -7,7 +7,16 @@ export default function HomeScreen() {
   console.log(navigation);
   return (
     <View>
-      <Button onPress={() => navigation.navigate("Job")} title="Go to Job" />
+      <Button
+        onPress={() =>
+          navigation.navigate("Job", {
+            id: 1,
+            name: "Job 1",
+            lastName: "Last Name",
+          })
+        }
+        title="Go to Job"
+      />
       <Text>HomeScreen</Text>
     </View>
   );
