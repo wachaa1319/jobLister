@@ -6,13 +6,14 @@ import { Button } from "react-native";
 export default function JobScreen() {
   const navigation = useNavigation();
   const route = useRoute();
-  console.log(route.params);
+
+  const { job } = route.params;
+  console.log(job);
   return (
     <View>
-      <Button onPress={() => navigation.goBack()} title="Go to Home" />
       <Text>JobScreen</Text>
-      <Text>{route.params.id}</Text>
-      <Text>{route.params.lastName}</Text>
+      <Text>{job.title}</Text>
+      <Text>{job.salary}</Text>
     </View>
   );
 }
